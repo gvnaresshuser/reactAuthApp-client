@@ -65,7 +65,7 @@ function Register() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-700 via-violet-700 to-purple-800">
       <div className="container mx-auto min-h-screen flex items-center justify-center px-6 py-10">
         {/* Left Section */}
-        <div className="hidden lg:flex w-1/2 text-white pr-16">
+        <div className="hidden lg:flex lg:w-1/2 px-10 xl:px-36 text-white">
           <div>
             <h1 className="text-6xl font-extrabold leading-tight">
               Auth Admin
@@ -98,9 +98,9 @@ function Register() {
         {/* Register Card */}
 
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl p-10">
+          <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl pl-10 pr-10 pt-2 pb-2">
             <div className="text-center mb-8">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-600 text-white text-2xl font-bold">
+              <div className="mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-600 text-white text-2xl font-bold">
                 RA
               </div>
 
@@ -174,7 +174,7 @@ function Register() {
               </Button>
             </form>
 
-            <p className="text-center mt-8 text-slate-600">
+            <p className="text-center mt-4 text-slate-600">
               Already have an account?{" "}
               <Link
                 to="/login"

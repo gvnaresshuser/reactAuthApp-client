@@ -9,7 +9,9 @@ import {
   PlusCircle,
   KeyRound,
   LogOut,
+  Settings,
 } from "lucide-react";
+import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 //import axios from "axios";
 import { logoutApi } from "../api/authApi"; // adjust the path as needed
@@ -17,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Profile = () => {
+  const [loggingOut, setLoggingOut] = useState(false);
   const navigate = useNavigate();
   const accessToken = localStorage.getItem("accessToken");
 
@@ -47,7 +50,7 @@ const Profile = () => {
       navigate("/login", { replace: true });
     }
   }; */
-  const handleLogout = async () => {
+/*   const handleLogout = async () => {
     try {
       await logoutApi();
 
@@ -60,6 +63,43 @@ const Profile = () => {
       console.error(error);
 
       toast.error(error.response?.data?.message || "Logout failed.");
+    }
+  }; */
+  const handleLogout = async () => {
+    setLoggingOut(true);
+
+    const toastId = toast.loading("Logging out...", {
+      style: {
+        background: "#dc2626",
+        color: "#fff",
+        border: "1px solid #b91c1c",
+        padding: "16px",
+        borderRadius: "12px",
+      },
+      iconTheme: {
+        primary: "#ffffff",
+        secondary: "#dc2626",
+      },
+    });
+
+    try {
+      await logoutApi();
+
+      toast.success("Logged out successfully.", {
+        id: toastId,
+      });
+
+      localStorage.removeItem("accessToken");
+
+      navigate("/login", { replace: true });
+    } catch (error) {
+      console.error(error);
+
+      toast.error(error.response?.data?.message || "Logout failed.", {
+        id: toastId,
+      });
+
+      setLoggingOut(false);
     }
   };
 
@@ -202,11 +242,25 @@ const Profile = () => {
 
           <button
             onClick={handleLogout}
-            className="rounded-xl border p-6 hover:shadow-lg transition text-center"
+            disabled={loggingOut}
+            className={`rounded-xl border p-6 transition text-center ${
+              loggingOut
+                ? "bg-gray-100 cursor-not-allowed opacity-70"
+                : "hover:shadow-lg"
+            }`}
           >
-            <LogOut className="mx-auto text-red-600" size={40} />
+            {loggingOut ? (
+              <Settings
+                size={40}
+                className="mx-auto text-gray-600 animate-spin"
+              />
+            ) : (
+              <LogOut size={40} className="mx-auto text-red-600" />
+            )}
 
-            <p className="mt-4 font-semibold">Logout</p>
+            <p className="mt-4 font-semibold">
+              {loggingOut ? "Logging out..." : "Logout"}
+            </p>
           </button>
         </div>
       </div>

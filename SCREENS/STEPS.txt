@@ -695,3 +695,939 @@ To https://github.com/gvnaresshuser/reactAuthApp-client.git
 branch 'main' set up to track 'origin/main'.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+
+  VITE v8.1.5  ready in 12704 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+12:11:16 pm [vite] (client) Pre-transform error: Transform failed with 6 errors:
+
+[PARSE_ERROR] Identifier `Edit` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:10 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │          ──┬─
+   │            ╰─── `Edit` has already been declared here
+   │
+ 4 │   Edit,
+   │   ──┬─
+   │     ╰─── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `Trash2` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:16 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                ───┬──
+   │                   ╰──── `Trash2` has already been declared here
+   │
+ 5 │   Trash2,
+   │   ───┬──
+   │      ╰──── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `Package` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:24 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                        ───┬───
+   │                           ╰───── `Package` has already been declared here
+   │
+ 6 │   Package,
+   │   ───┬───
+   │      ╰───── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `IndianRupee` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:33 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                                 ─────┬─────
+   │                                      ╰─────── `IndianRupee` has already been declared here
+   │
+ 7 │   IndianRupee,
+   │   ─────┬─────
+   │        ╰─────── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `Tag` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:46 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                                              ─┬─
+   │                                               ╰─── `Tag` has already been declared here
+   │
+ 8 │   Tag,
+   │   ─┬─
+   │    ╰─── It can not be redeclared here
+───╯
+
+...
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/components/products/ProductCard.jsx
+12:11:16 pm [vite] Internal server error: Transform failed with 6 errors:
+
+[PARSE_ERROR] Identifier `Edit` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:10 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │          ──┬─
+   │            ╰─── `Edit` has already been declared here
+   │
+ 4 │   Edit,
+   │   ──┬─
+   │     ╰─── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `Trash2` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:16 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                ───┬──
+   │                   ╰──── `Trash2` has already been declared here
+   │
+ 5 │   Trash2,
+   │   ───┬──
+   │      ╰──── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `Package` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:24 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                        ───┬───
+   │                           ╰───── `Package` has already been declared here
+   │
+ 6 │   Package,
+   │   ───┬───
+   │      ╰───── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `IndianRupee` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:33 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                                 ─────┬─────
+   │                                      ╰─────── `IndianRupee` has already been declared here
+   │
+ 7 │   IndianRupee,
+   │   ─────┬─────
+   │        ╰─────── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `Tag` has already been declared
+   ╭─[ src/components/products/ProductCard.jsx:1:46 ]
+   │
+ 1 │ import { Edit, Trash2, Package, IndianRupee, Tag, User } from "lucide-react";
+   │                                              ─┬─
+   │                                               ╰─── `Tag` has already been declared here
+   │
+ 8 │   Tag,
+   │   ─┬─
+   │    ╰─── It can not be redeclared here
+───╯
+
+...
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/components/products/ProductCard.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+12:11:55 pm [vite] (client) hmr update /src/index.css
+12:12:54 pm [vite] (client) hmr update /src/pages/dashboard/Dashboard.jsx, /src/index.css
+12:12:54 pm [vite] (client) hmr update /src/pages/dashboard/Dashboard.jsx, /src/index.css (x2)
+12:12:58 pm [vite] (client) hmr update /src/index.css
+12:48:27 pm [vite] (client) hmr update /src/index.css (x2)
+12:48:34 pm [vite] (client) hmr update /src/index.css (x3)
+12:48:55 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css
+12:49:02 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css (x2)
+12:49:36 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx
+12:49:37 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x2)
+12:49:49 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x3)
+12:49:52 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x4)
+12:49:58 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x5)
+12:49:58 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x6)
+12:51:32 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css
+12:51:39 pm [vite] Internal server error: Transform failed with 2 errors:
+
+[PARSE_ERROR] Identifier `useNavigate` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:10 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── `useNavigate` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `useParams` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:23 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── `useParams` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/EditProduct.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+12:51:40 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css
+12:51:40 pm [vite] Internal server error: Transform failed with 2 errors:
+
+[PARSE_ERROR] Identifier `useNavigate` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:10 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── `useNavigate` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `useParams` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:23 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── `useParams` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/EditProduct.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+12:51:40 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css
+12:51:40 pm [vite] Internal server error: Transform failed with 2 errors:
+
+[PARSE_ERROR] Identifier `useNavigate` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:10 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── `useNavigate` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `useParams` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:23 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── `useParams` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/EditProduct.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+12:52:09 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css
+12:52:09 pm [vite] Internal server error: Transform failed with 2 errors:
+
+[PARSE_ERROR] Identifier `useNavigate` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:10 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── `useNavigate` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │          ─────┬─────
+   │               ╰─────── It can not be redeclared here
+───╯
+
+[PARSE_ERROR] Identifier `useParams` has already been declared
+   ╭─[ src/pages/products/EditProduct.jsx:2:23 ]
+   │
+ 2 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── `useParams` has already been declared here
+   │
+ 7 │ import { useNavigate, useParams } from "react-router-dom";
+   │                       ────┬────
+   │                           ╰────── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/EditProduct.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+12:52:21 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css
+12:53:23 pm [vite] (client) hmr update /src/pages/products/EditProduct.jsx, /src/index.css (x2)
+12:55:22 pm [vite] (client) hmr update /src/pages/products/AddProduct.jsx, /src/index.css
+12:56:13 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css
+12:56:29 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x2)
+12:57:14 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x3)
+12:58:15 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x4)
+12:58:20 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x5)
+12:59:05 pm [vite] (client) hmr update /src/pages/products/AddProduct.jsx, /src/index.css
+12:59:37 pm [vite] (client) hmr update /src/pages/products/AddProduct.jsx, /src/index.css (x2)
+1:00:14 pm [vite] (client) hmr update /src/pages/products/AddProduct.jsx, /src/index.css (x3)
+1:01:54 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css
+1:01:56 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x2)
+1:02:08 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x3)
+1:02:43 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x4)
+1:03:00 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x5)
+1:03:43 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x6)
+1:04:19 pm [vite] (client) hmr update /src/components/products/ProductForm.jsx, /src/index.css (x7)
+1:06:59 pm [vite] (client) hmr update /src/components/products/ProductCard.jsx, /src/index.css
+1:07:49 pm [vite] (client) hmr update /src/index.css
+1:09:26 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css
+1:10:07 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x2)
+1:10:09 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x3)
+1:11:24 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x4)
+1:12:18 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x5)
+1:12:21 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x6)
+1:12:26 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x7)
+1:12:38 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x8)
+1:12:40 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x9)
+1:12:44 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x10)
+1:13:05 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x11)
+1:13:11 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x12)
+1:13:13 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x13)
+1:13:16 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x14)
+1:13:18 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x15)
+1:13:21 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x16)
+1:13:28 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x17)
+1:14:04 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x18)
+1:14:36 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x19)
+1:14:37 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x20)
+1:14:45 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x21)
+1:14:47 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x22)
+1:15:37 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x23)
+1:16:21 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css (x24)
+1:16:49 pm [vite] (client) hmr update /src/App.css, /src/index.css
+1:16:51 pm [vite] (client) hmr update /src/App.css, /src/index.css (x2)
+1:17:04 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css
+1:18:00 pm [vite] (client) hmr update /src/App.css, /src/index.css
+1:18:18 pm [vite] (client) hmr update /src/pages/products/ProductList.jsx, /src/index.css
+1:18:41 pm [vite] (client) hmr update /src/App.css, /src/index.css
+1:19:02 pm [vite] (client) hmr update /src/App.css, /src/index.css (x2)
+1:19:21 pm [vite] (client) hmr update /src/App.css, /src/index.css (x3)
+1:19:23 pm [vite] (client) hmr update /src/App.css, /src/index.css (x4)
+1:19:33 pm [vite] (client) hmr update /src/App.css, /src/index.css (x5)
+1:19:36 pm [vite] (client) hmr update /src/App.css, /src/index.css (x6)
+1:19:51 pm [vite] (client) hmr update /src/App.css, /src/index.css (x7)
+1:21:30 pm [vite] (client) hmr update /src/components/products/ProductCard.jsx, /src/index.css
+1:21:32 pm [vite] (client) hmr update /src/components/products/ProductCard.jsx, /src/index.css (x2)
+1:22:17 pm [vite] (client) hmr update /src/components/products/ProductCard.jsx, /src/index.css (x3)
+1:22:18 pm [vite] (client) hmr update /src/components/products/ProductCard.jsx, /src/index.css (x4)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm install sweetalert2
+
+added 1 package, and audited 188 packages in 3s
+
+43 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+1:24:24 pm [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v8.1.5  ready in 18096 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+1:24:27 pm [vite] (client) [optimizer] bundling dependencies...
+^C
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+
+  VITE v8.1.5  ready in 2623 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+2:01:07 pm [vite] (client) hmr update /src/index.css, /src/components/products/ProductCard.jsx
+2:01:14 pm [vite] (client) hmr update /src/index.css, /src/components/products/ProductCard.jsx (x2)
+2:02:56 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx
+2:03:09 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x2)
+2:03:32 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x3)
+2:03:33 pm [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+   ╭─[ src/components/common/Loader.jsx:6:21 ]
+   │
+ 6 │       {/* Spinner */}
+   │                     ┬
+   │                     ╰──
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/components/common/Loader.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+2:03:36 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx
+2:03:39 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x2)
+2:04:00 pm [vite] (client) hmr update /src/index.css, /src/components/common/Loader.jsx (x3)
+2:06:27 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx
+2:06:42 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx (x2)
+2:07:26 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx (x3)
+2:07:38 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx (x4)
+2:07:39 pm [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Expected `from` but found `const`
+    ╭─[ src/pages/products/ProductList.jsx:10:1 ]
+    │
+ 10 │ const ProductList = () => {
+    │ ──┬──
+    │   ╰──── `from` expected
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+2:07:42 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx
+2:07:42 pm [vite] (client) Pre-transform error: Failed to resolve import "@reach/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@reach/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+2:07:42 pm [vite] Internal server error: Failed to resolve import "@reach/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@reach/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+      at TransformPluginContext._formatLog (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30416:39)
+      at TransformPluginContext.error (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30413:14)
+      at normalizeUrl (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27438:18)
+      at async file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27506:30
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27474:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:14)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+2:07:45 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:07:45 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+2:07:45 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x2)
+2:07:46 pm [vite] Internal server error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+      at TransformPluginContext._formatLog (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30416:39)
+      at TransformPluginContext.error (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30413:14)
+      at normalizeUrl (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27438:18)
+      at async file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27506:30
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27474:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:14)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+2:07:46 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+2:07:46 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x2)
+2:07:46 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x3)
+2:07:46 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x4)
+2:07:46 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x5)
+2:07:50 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:07:50 pm [vite] Internal server error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+      at TransformPluginContext._formatLog (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30416:39)
+      at TransformPluginContext.error (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30413:14)
+      at normalizeUrl (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27438:18)
+      at async file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27506:30
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27474:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:14)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+2:07:50 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+2:07:50 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x2)
+2:07:50 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x3)
+2:07:50 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x4)
+2:07:56 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:07:56 pm [vite] (client) Pre-transform error: Transform failed with 1 error:
+
+[PARSE_ERROR] Identifier expected. 'const' is a reserved word that cannot be used here.
+    ╭─[ src/pages/products/ProductList.jsx:12:3 ]
+    │
+ 12 │   const { products, loading, search, setSearch, fetchProducts, deleteProduct } =
+    │   ──┬──
+    │     ╰────
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+2:07:56 pm [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Identifier expected. 'const' is a reserved word that cannot be used here.
+    ╭─[ src/pages/products/ProductList.jsx:12:3 ]
+    │
+ 12 │   const { products, loading, search, setSearch, fetchProducts, deleteProduct } =
+    │   ──┬──
+    │     ╰────
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+2:07:57 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:07:57 pm [vite] Internal server error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+      at TransformPluginContext._formatLog (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30416:39)
+      at TransformPluginContext.error (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30413:14)
+      at normalizeUrl (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27438:18)
+      at async file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27506:30
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27474:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:14)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+2:07:57 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+2:07:57 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x2)
+2:07:57 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x3)
+2:08:03 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:08:03 pm [vite] Internal server error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+      at TransformPluginContext._formatLog (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30416:39)
+      at TransformPluginContext.error (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30413:14)
+      at normalizeUrl (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27438:18)
+      at async file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27506:30
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:27474:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:14)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+2:08:03 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+2:08:03 pm [vite] (client) Pre-transform error: Failed to resolve import "@react/router" from "src/pages/products/ProductList.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx:8:25
+  5  |  import ProductCard from "../../components/products/ProductCard";
+  6  |  import { KeyRound } from "lucide-react";
+  7  |  import { navigate } from "@react/router";
+     |                            ^
+  8  |  var _jsxFileName = "E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx";
+  9  |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime"; (x2)
+2:08:29 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:08:30 pm [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Identifier `Link` has already been declared
+   ╭─[ src/pages/products/ProductList.jsx:2:10 ]
+   │
+ 2 │ import { Link } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── `Link` has already been declared here
+   │
+ 8 │ import { Link, useNavigate } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+2:08:30 pm [vite] (client) Pre-transform error: Transform failed with 1 error:
+
+[PARSE_ERROR] Identifier `Link` has already been declared
+   ╭─[ src/pages/products/ProductList.jsx:2:10 ]
+   │
+ 2 │ import { Link } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── `Link` has already been declared here
+   │
+ 8 │ import { Link, useNavigate } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+2:08:38 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:08:38 pm [vite] (client) Pre-transform error: Transform failed with 1 error:
+
+[PARSE_ERROR] Identifier `Link` has already been declared
+   ╭─[ src/pages/products/ProductList.jsx:2:10 ]
+   │
+ 2 │ import { Link } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── `Link` has already been declared here
+   │
+ 8 │ import { Link, useNavigate } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+2:08:39 pm [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Identifier `Link` has already been declared
+   ╭─[ src/pages/products/ProductList.jsx:2:10 ]
+   │
+ 2 │ import { Link } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── `Link` has already been declared here
+   │
+ 8 │ import { Link, useNavigate } from "react-router-dom";
+   │          ──┬─
+   │            ╰─── It can not be redeclared here
+───╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/products/ProductList.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+2:08:45 pm [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+2:09:21 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx
+2:09:35 pm [vite] (client) hmr update /src/index.css, /src/pages/products/ProductList.jsx (x2)
+2:11:03 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx
+2:11:14 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x2)
+2:11:21 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x3)
+2:11:36 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x4)
+2:11:43 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x5)
+2:11:49 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x6)
+2:11:51 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x7)
+2:12:20 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x8)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm install jwt-decode
+
+added 1 package, and audited 189 packages in 2s
+
+43 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+2:13:56 pm [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v8.1.5  ready in 6399 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+2:13:59 pm [vite] (client) [optimizer] bundling dependencies...
+2:14:56 pm [vite] (client) [optimizer] bundling dependencies... (x2)
+2:14:57 pm [vite] (client) dependency optimized: jwt-decode
+2:15:18 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx
+2:15:21 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x2)
+2:23:47 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x3)
+2:24:14 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x4)
+2:24:31 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x5)
+2:24:53 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x6)
+2:25:17 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x7)
+2:25:37 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x8)
+2:25:55 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x9)
+2:25:57 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x10)
+2:27:33 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x11)
+2:27:50 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x12)
+2:28:18 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x13)
+2:28:25 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x14)
+2:29:46 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x15)
+2:31:02 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x16)
+2:31:16 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x17)
+2:31:39 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x18)
+2:31:40 pm [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Expected `,` or `)` but found `{`
+     ╭─[ src/pages/dashboard/Dashboard.jsx:140:13 ]
+     │
+  99 │           {decoded && (
+     │                       ┬
+     │                       ╰── Opened here
+     │
+ 140 │             {copied && (
+     │             ┬
+     │             ╰── `,` or `)` expected
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/dashboard/Dashboard.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+2:31:49 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx
+2:31:52 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x2)
+2:33:01 pm [vite] (client) hmr update /src/index.css, /src/pages/dashboard/Dashboard.jsx (x3)
+2:36:16 pm [vite] (client) hmr update /src/routes/AppRoutes.jsx, /src/index.css
+2:36:28 pm [vite] (client) hmr update /src/routes/AppRoutes.jsx, /src/index.css (x2)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add .
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.css', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SCREENS/STEPS.txt
+        modified:   package-lock.json
+        modified:   package.json
+        modified:   src/App.css
+        modified:   src/api/productApi.js
+        renamed:    src/components/common/Spinner.jsx -> src/components/common/ConfirmDialog.jsx
+        new file:   src/components/common/Loader copy.jsx
+        new file:   src/components/common/Loader.jsx
+        modified:   src/components/products/ProductCard.jsx
+        modified:   src/components/products/ProductForm.jsx
+        new file:   src/components/products/ProductSearch.jsx
+        new file:   src/hooks/useProducts.js
+        new file:   src/pages/Profile.jsx
+        modified:   src/pages/dashboard/Dashboard.jsx
+        modified:   src/pages/products/AddProduct.jsx
+        modified:   src/pages/products/EditProduct.jsx
+        modified:   src/pages/products/ProductList.jsx
+        modified:   src/routes/AppRoutes.jsx
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "Frontend Complete"
+[main c9d69ae] Frontend Complete
+ 18 files changed, 1261 insertions(+), 189 deletions(-)
+ rename src/components/common/{Spinner.jsx => ConfirmDialog.jsx} (100%)
+ create mode 100644 src/components/common/Loader copy.jsx
+ create mode 100644 src/components/common/Loader.jsx
+ create mode 100644 src/components/products/ProductSearch.jsx
+ create mode 100644 src/hooks/useProducts.js
+ create mode 100644 src/pages/Profile.jsx
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push
+Enumerating objects: 53, done.
+Counting objects: 100% (51/51), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (29/29), 12.98 KiB | 316.00 KiB/s, done.
+Total 29 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 10 local objects.
+To https://github.com/gvnaresshuser/reactAuthApp-client.git
+   aa697e0..c9d69ae  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>

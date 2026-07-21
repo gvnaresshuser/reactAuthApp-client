@@ -1,0 +1,34 @@
+LIVE FRONTEND UTL:
+-----------------
+https://reactauthapp-client.onrender.com
+
+
+https://github.com/gvnaresshuser/reactAuthApp-client.git
+
+
+https://dashboard.render.com/login
+Google login
+gvnaressh@gmail.com
+
+New
+Static Site
+reactAuthApp-client
+Public git repository
+https://github.com/gvnaresshuser/reactAuthApp-client.git
+CONNECT
+
+Build Command : npm install && npm run build
+Publish Directory : dist
+Environment Variables
+VITE_API_URL=https://reactauthapp-server.onrender.com
+Deploy Static Site
+
+https://reactauthapp-client.onrender.com
+
+********************************************************
+reactauthapp-server
+FRONTEND_URL=https://reactauthapp-client.onrender.com
+
+reactauthapp-client
+VITE_API_URL=https://reactauthapp-server.onrender.com
+********************************************************

@@ -6,20 +6,53 @@ import {
   ShieldCheck,
   Search,
   Database,
+  LogOut,
+  Boxes,
+  CirclePlus,
+  Settings,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { KeyRound, X, Copy } from "lucide-react";
 import { jwtDecode } from "jwt-decode";
-
+import { logoutApi } from "../../api/authApi"; // adjust the path as needed
+import toast from "react-hot-toast";
 const Dashboard = () => {
+  const [loggingOut, setLoggingOut] = useState(false);
+  const navigate = useNavigate();
   const [showTokens, setShowTokens] = useState(false);
-const accessToken = localStorage.getItem("accessToken");
-const [copied, setCopied] = useState(false);
-let decoded = null;
+  const accessToken = localStorage.getItem("accessToken");
+  const [copied, setCopied] = useState(false);
+  let decoded = null;
 
-if (accessToken) {
-  decoded = jwtDecode(accessToken);
-}
+  if (accessToken) {
+    decoded = jwtDecode(accessToken);
+  }
+  const handleLogout = async () => {
+    setLoggingOut(true);
+
+    const toastId = toast.loading("Logging out...");
+
+    try {
+      await logoutApi();
+
+      toast.success("Logged out successfully.", {
+        id: toastId,
+      });
+
+      localStorage.removeItem("accessToken");
+
+      navigate("/login", { replace: true });
+    } catch (error) {
+      console.error(error);
+
+      toast.error(error.response?.data?.message || "Logout failed.", {
+        id: toastId,
+      });
+
+      setLoggingOut(false);
+    }
+  };
   return (
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -220,7 +253,7 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
       {/* Quick Actions */}
 
       <div className="flex gap-4 mt-8">
-        <Link
+        {/*  <Link
           to="/products"
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
         >
@@ -232,7 +265,39 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
           className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg"
         >
           Add Product
+        </Link> */}
+        <Link
+          to="/products"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center gap-2"
+        >
+          <Boxes size={18} />
+          View Products
         </Link>
+
+        <Link
+          to="/products/add"
+          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center gap-2"
+        >
+          <CirclePlus size={18} />
+          Add Product
+        </Link>
+        <button
+          onClick={handleLogout}
+          disabled={loggingOut}
+          className={`px-6 py-3 rounded-lg transition-all duration-200 flex items-center gap-2 text-white ${
+            loggingOut
+              ? "bg-gray-500 cursor-not-allowed"
+              : "bg-red-600 hover:bg-red-700"
+          }`}
+        >
+          {loggingOut ? (
+            <Settings size={18} className="animate-spin" />
+          ) : (
+            <LogOut size={18} />
+          )}
+
+          {loggingOut ? "Logging out..." : "Logout"}
+        </button>
       </div>
     </div>
   );

@@ -375,3 +375,25 @@ CREATE TABLE refresh_tokens (
         REFERENCES users(id)
         ON DELETE CASCADE
 );
+
+
+
+
+
+gvnaressh@gmail.com
+Naressh12578*
+changed to
+Naressh3695*
+
+
+Abhhay Uzwall
+venkatdada369@gmail.com
+Uzwall12578*
+changed to
+Uzwall3695*
+
+
+
+GMAIL USERID AND PASSWORD
+venkatdada369@gmail.com
+Gvnaressh3695

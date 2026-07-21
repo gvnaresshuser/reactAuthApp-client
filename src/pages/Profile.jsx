@@ -11,8 +11,12 @@ import {
   LogOut,
 } from "lucide-react";
 import { jwtDecode } from "jwt-decode";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const accessToken = localStorage.getItem("accessToken");
 
   let user = {};
@@ -20,6 +24,28 @@ const Profile = () => {
   if (accessToken) {
     user = jwtDecode(accessToken);
   }
+  const handleLogout = async () => {
+    try {
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/logout`,
+        {},
+        {
+          withCredentials: true,
+        },
+      );
+
+      toast.success("Logged out successfully.");
+    } catch (error) {
+      console.error(error);
+
+      toast.error("Logout failed.");
+    } finally {
+      // Always remove the access token
+      localStorage.removeItem("accessToken");
+
+      navigate("/login", { replace: true });
+    }
+  };
 
   return (
     <div className="max-w-6xl mx-auto p-6">
@@ -158,7 +184,10 @@ const Profile = () => {
             <p className="mt-4 font-semibold">JWT Dashboard</p>
           </Link>
 
-          <button className="rounded-xl border p-6 hover:shadow-lg transition text-center">
+          <button
+            onClick={handleLogout}
+            className="rounded-xl border p-6 hover:shadow-lg transition text-center"
+          >
             <LogOut className="mx-auto text-red-600" size={40} />
 
             <p className="mt-4 font-semibold">Logout</p>

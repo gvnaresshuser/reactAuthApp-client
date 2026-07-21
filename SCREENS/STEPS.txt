@@ -1631,3 +1631,39 @@ To https://github.com/gvnaresshuser/reactAuthApp-client.git
    aa697e0..c9d69ae  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+===================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .env
+        new file:   SCREENS/DEPLOYMENT-FRONTEND-STEPS.txt
+        modified:   SCREENS/STEPS.txt
+        modified:   src/api/axios.js
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "backend url changed"
+[main fbc81d7] backend url changed
+ 4 files changed, 973 insertions(+), 1 deletion(-)
+ create mode 100644 .env
+ create mode 100644 SCREENS/DEPLOYMENT-FRONTEND-STEPS.txt
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 8.59 KiB | 879.00 KiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/gvnaresshuser/reactAuthApp-client.git
+   c9d69ae..fbc81d7  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>

@@ -1667,3 +1667,33 @@ To https://github.com/gvnaresshuser/reactAuthApp-client.git
    c9d69ae..fbc81d7  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+=================================================================
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SCREENS/NOTES.txt
+        modified:   SCREENS/STEPS.txt
+        modified:   src/pages/Profile.jsx
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "logout implemented"
+[main 4ef797a] logout implemented
+ 3 files changed, 89 insertions(+), 2 deletions(-)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.50 KiB | 511.00 KiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/gvnaresshuser/reactAuthApp-client.git
+   fbc81d7..4ef797a  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>

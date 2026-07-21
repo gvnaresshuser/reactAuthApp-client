@@ -182,3 +182,21 @@
     border-right-color: var(--border);
   }
 }
+
+/* //----------------------------------------------- */
+@keyframes spinY {
+  from {
+    transform: perspective(500px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(500px) rotateY(360deg);
+  }
+}
+
+.animate-spin-y {
+  animation: spinY 2s linear infinite;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}

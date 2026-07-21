@@ -556,3 +556,142 @@ REGISTER TEST FRONTEND:
 Naressh GV
 naressh@gmail.com
 GvNaressh3695*
+
+
+github.com
+gvnaresshuser
+reactAuthApp-client
+https://github.com/gvnaresshuser/reactAuthApp-client.git
+
+
+echo "# reactAuthApp-client" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/gvnaresshuser/reactAuthApp-client.git
+git push -u origin main
+
+git remote add origin https://github.com/gvnaresshuser/reactAuthApp-client.git
+git branch -M main
+git push -u origin main
+
+---------------------
+Steps
+1. Go into the client folder
+cd client
+2. Initialize Git (if it isn't already)
+git init
+3. Check .gitignore
+
+Make sure it contains:
+
+node_modules
+dist
+.env
+4. Commit
+git add .
+git commit -m "Initial React Auth Client"
+5. Create a new GitHub repository
+
+For example:
+
+react-auth-client
+6. Connect it
+git remote add origin https://github.com/gvnaresshuser/reactAuthApp-client.git
+7. Push
+git branch -M main
+git push -u origin main
+---------------------
+
+
+========================================================================================
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git init
+Initialized empty Git repository in E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/.git/
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/icons.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'vite.config.js', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "Initial React Auth Client"
+[master (root-commit) aa697e0] Initial React Auth Client
+ 48 files changed, 6082 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 SCREENS/KEY concept of JWT authentication.png
+ create mode 100644 SCREENS/NOTES.txt
+ create mode 100644 SCREENS/STEPS.txt
+ create mode 100644 eslint.config.js
+ create mode 100644 index.html
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 public/favicon.svg
+ create mode 100644 public/icons.svg
+ create mode 100644 src/App copy.jsx
+ create mode 100644 src/App.css
+ create mode 100644 src/App.jsx
+ create mode 100644 src/api/authApi.js
+ create mode 100644 src/api/axios copy.js
+ create mode 100644 src/api/axios.js
+ create mode 100644 src/api/productApi.js
+ create mode 100644 src/assets/hero.png
+ create mode 100644 src/assets/react.svg
+ create mode 100644 src/assets/vite.svg
+ create mode 100644 src/components/common/Button.jsx
+ create mode 100644 src/components/common/Card.jsx
+ create mode 100644 src/components/common/Input.jsx
+ create mode 100644 src/components/common/PasswordInput.jsx
+ create mode 100644 src/components/common/Spinner.jsx
+ create mode 100644 src/components/layout/Navbar.jsx
+ create mode 100644 src/components/layout/Sidebar.jsx
+ create mode 100644 src/components/products/ProductCard.jsx
+ create mode 100644 src/components/products/ProductForm.jsx
+ create mode 100644 src/context/AuthContext.jsx
+ create mode 100644 src/hooks/useAuth.js
+ create mode 100644 src/index copy.css
+ create mode 100644 src/index.css
+ create mode 100644 src/layouts/AuthLayout.jsx
+ create mode 100644 src/layouts/MainLayout.jsx
+ create mode 100644 src/main.jsx
+ create mode 100644 src/pages/auth/ForgotPassword.jsx
+ create mode 100644 src/pages/auth/Login.jsx
+ create mode 100644 src/pages/auth/Register.jsx
+ create mode 100644 src/pages/auth/ResetPassword.jsx
+ create mode 100644 src/pages/dashboard/Dashboard.jsx
+ create mode 100644 src/pages/products/AddProduct.jsx
+ create mode 100644 src/pages/products/EditProduct.jsx
+ create mode 100644 src/pages/products/ProductList.jsx
+ create mode 100644 src/routes/AppRoutes.jsx
+ create mode 100644 src/routes/ProtectedRoute.jsx
+ create mode 100644 vite.config.js
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git remote add origin https://github.com/gvnaresshuser/reactAuthApp-client.git
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git branch -M main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push -u origin main
+Enumerating objects: 59, done.
+Counting objects: 100% (59/59), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (55/55), done.
+Writing objects: 100% (59/59), 733.25 KiB | 14.38 MiB/s, done.
+Total 59 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/gvnaresshuser/reactAuthApp-client.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>

@@ -1,0 +1,377 @@
+malicious JavaScript (XSS)
+
+With an HttpOnly cookie:
+document.cookie
+won't reveal the refresh token because it's inaccessible to JavaScript.
+
+What Many Production Apps Do
+React
+      │
+Redux (Access Token only, memory)
+      │
+Axios
+      │
+Authorization Header
+      │
+HTTPS
+      │
+Express
+      │
+JWT Verification
+      │
+PostgreSQL
+
+And separately:
+Browser
+      │
+HttpOnly Refresh Cookie
+      │
+Express
+      │
+/refresh
+      │
+New Access Token
+
+My recommendation for your course project
+
+I would teach students this exact flow:
+
+✅ Access Token → Redux (memory only, not persisted)
+✅ Refresh Token → HttpOnly Secure Cookie
+✅ Axios interceptor to automatically refresh expired access tokens
+✅ Redux repopulated after a successful /refresh
+✅ Automatic logout if refresh fails
+✅ Short-lived access tokens (10–15 minutes)
+✅ Longer-lived refresh tokens (e.g., 7 days), with rotation if you want to demonstrate a more advanced setup
+
+Final Architecture
+
+                 React 19 (Vite)
+                      │
+               React Router v7
+                      │
+               Redux Toolkit
+                      │
+              Axios Instance
+                      │
+        Axios Request Interceptor
+                      │
+        Authorization: Bearer AccessToken
+                      │
+               HTTPS (withCredentials)
+                      │
+──────────────────────────────────────────────
+                Express Server
+──────────────────────────────────────────────
+Helmet
+Compression
+CORS
+Cookie Parser
+Rate Limiter
+Express Validator
+Authentication Middleware
+Controllers
+Services
+Database
+──────────────────────────────────────────────
+                      │
+                PostgreSQL (Neon)
+				
+Security We'll Cover
+
+✅ JWT Authentication
+
+✅ Refresh Tokens
+
+✅ Access Tokens
+
+✅ HttpOnly Cookies
+
+✅ Secure Cookies
+
+✅ SameSite Cookies
+
+✅ Helmet
+
+✅ CORS
+
+✅ SQL Injection Prevention
+
+✅ XSS Prevention
+
+✅ HPP Protection
+
+✅ Rate Limiting
+
+✅ Password Hashing
+
+✅ Validation
+
+✅ Authentication Middleware
+
+✅ Protected Routes
+
+✅ Refresh Token Rotation (Advanced)
+
+React Folder Structure
+
+client
+
+src
+
+│
+
+├── api
+│      axios.js
+│
+├── redux
+│      store.js
+│
+│      auth
+│          authSlice.js
+│          authThunk.js
+│
+│      products
+│          productSlice.js
+│          productThunk.js
+│
+├── pages
+│      Login.jsx
+│      Dashboard.jsx
+│      Products.jsx
+│
+├── components
+│      Navbar.jsx
+│      ProductForm.jsx
+│      ProductTable.jsx
+│
+├── routes
+│      ProtectedRoute.jsx
+│
+├── hooks
+│      useAuth.js
+│
+├── App.jsx
+│
+└── main.jsx				
+
+
+Express Folder Structure
+
+server
+
+│
+
+├── config
+│      db.js
+│      jwt.js
+│
+├── middleware
+│      authMiddleware.js
+│      errorMiddleware.js
+│      validateMiddleware.js
+│
+├── controllers
+│      authController.js
+│      productController.js
+│
+├── services
+│      authService.js
+│      productService.js
+│
+├── routes
+│      authRoutes.js
+│      productRoutes.js
+│
+├── utils
+│      generateToken.js
+│      generateRefreshToken.js
+│
+├── validators
+│      authValidator.js
+│      productValidator.js
+│
+├── app.js
+│
+└── server.js
+------------------------------------
+Complete Course Flow
+Module 1
+
+Project Setup
+
+React
+
+Express
+
+Neon
+
+Tailwind
+Module 2
+
+Database
+
+Users
+
+Products
+Module 3
+
+Authentication
+
+Register
+
+Login
+
+Logout
+Module 4
+
+JWT
+
+Access Token
+
+Refresh Token
+Module 5
+
+Cookies
+
+HttpOnly
+
+Secure
+
+SameSite
+Module 6
+
+Redux Toolkit
+
+Login
+
+Logout
+
+Refresh
+
+User
+Module 7
+
+Axios
+
+Axios Instance
+
+Interceptors
+
+Auto Refresh
+Module 8
+
+CRUD
+
+Create Product
+
+Read Products
+
+Update Product
+
+Delete Product
+Module 9
+
+Security
+
+Helmet
+
+Rate Limit
+
+Validation
+
+SQL Injection
+
+XSS
+
+CORS
+
+HPP
+
+Compression
+
+Module 10
+
+Deployment
+
+React
+
+Render Static Site
+
+Express
+
+Render Web Service
+
+Neon
+
+Cloud Database
+------------------------------------
+What We'll Build
+Login
+      │
+      ▼
+Redux stores Access Token
+
+      │
+      ▼
+Create Product
+
+      │
+      ▼
+Read Products
+
+      │
+      ▼
+Update Product
+
+      │
+      ▼
+Delete Product
+
+      │
+      ▼
+Access Token Expires
+
+      │
+      ▼
+Axios calls
+
+/refresh
+
+      │
+      ▼
+Server checks Refresh Cookie
+
+      │
+      ▼
+Returns New Access Token
+
+      │
+      ▼
+Redux Updated
+
+      │
+      ▼
+Original Request Retries
+
+      │
+      ▼
+User Never Notices
+----------------------------------
+
+CREATE TABLE refresh_tokens (
+    id SERIAL PRIMARY KEY,
+
+    user_id INTEGER NOT NULL,
+
+    token TEXT NOT NULL,
+
+    expires_at TIMESTAMP NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_refresh_user
+        FOREIGN KEY(user_id)
+        REFERENCES users(id)
+        ON DELETE CASCADE
+);

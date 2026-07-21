@@ -1,0 +1,558 @@
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE>npm create vite@latest reactAuthApp
+
+> npx
+> create-vite reactAuthApp
+
+|
+o  Package name:
+|  reactauthapp
+|
+o  Select a framework:
+|  React
+|
+o  Select a variant:
+|  JavaScript
+|
+o  Which linter to use?
+|  ESLint
+|
+o  Install with npm and start now?
+|  Yes
+|
+o  Scaffolding project in E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp...
+|
+o  Installing dependencies with npm...
+|
+
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE>npm create vite@latest reactAuthApp
+
+> npx
+> create-vite reactAuthApp
+
+|
+o  Package name:
+|  reactauthapp
+|
+o  Select a framework:
+|  React
+|
+o  Select a variant:
+|  JavaScript
+|
+o  Which linter to use?
+|  ESLint
+|
+o  Install with npm and start now?
+|  Yes
+|
+o  Scaffolding project in E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp...
+|
+o  Installing dependencies with npm...
+
+added 135 packages, and audited 136 packages in 23s
+
+31 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+|
+o  Starting dev server...
+
+> reactauthapp@0.0.0 dev
+> vite
+
+
+  VITE v8.1.5  ready in 1029 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+https://tailwindcss.com/docs/installation/using-vite
+
+npm install tailwindcss @tailwindcss/vite
+
+--------
+vite.config.ts
+
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+--------
+
+
+npm run dev
+
+React Folder Structure
+
+client
+
+src
+
+│
+
+├── api
+│      axios.js
+│
+├── redux
+│      store.js
+│
+│      auth
+│          authSlice.js
+│          authThunk.js
+│
+│      products
+│          productSlice.js
+│          productThunk.js
+│
+├── pages
+│      Login.jsx
+│      Dashboard.jsx
+│      Products.jsx
+│
+├── components
+│      Navbar.jsx
+│      ProductForm.jsx
+│      ProductTable.jsx
+│
+├── routes
+│      ProtectedRoute.jsx
+│
+├── hooks
+│      useAuth.js
+│
+├── App.jsx
+│
+└── main.jsx				
+
+
+echo "# reactAuthApp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/gvnaresshuser/reactAuthApp.git
+git push -u origin main
+
+git remote add origin https://github.com/gvnaresshuser/reactAuthApp.git
+git branch -M main
+git push -u origin main
+
+npm install react-router-dom axios react-hot-toast react-hook-form lucide-react
+npm install react-router-dom axios react-hook-form react-hot-toast lucide-react
+
+
+tree src /F
+
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+
+  VITE v8.1.5  ready in 4804 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+7:00:37 am [vite] (client) hmr update /src/App.jsx, /src/index.css
+7:00:41 am [vite] (client) hmr update /src/App.jsx, /src/index.css (x2)
+7:00:43 am [vite] (client) hmr update /src/App.jsx, /src/index.css (x3)
+7:00:46 am [vite] (client) hmr update /src/App.jsx, /src/index.css (x4)
+7:01:49 am [vite] (client) hmr update /src/App.jsx, /src/index.css (x5)
+7:04:34 am [vite] (client) hmr update /src/pages/auth/Login.jsx, /src/index.css
+7:04:52 am [vite] (client) hmr update /src/pages/auth/Login.jsx, /src/index.css (x2)
+7:05:00 am [vite] (client) hmr update /src/pages/auth/Login.jsx, /src/index.css (x3)
+7:05:02 am [vite] (client) hmr update /src/pages/auth/Login.jsx, /src/index.css (x4)
+7:05:07 am [vite] (client) hmr update /src/pages/auth/Login.jsx, /src/index.css (x5)
+7:05:07 am [vite] (client) hmr update /src/pages/auth/Login.jsx, /src/index.css (x6)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+
+  VITE v8.1.5  ready in 2500 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+7:06:07 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
+7:06:40 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x2)
+7:07:00 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x3)
+7:07:23 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x4)
+7:07:50 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x5)
+7:07:57 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x6)
+7:08:02 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x7)
+7:08:14 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x8)
+7:09:50 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x9)
+7:09:51 am [vite] Internal server error: Transform failed with 2 errors:
+
+[PARSE_ERROR] Expected corresponding JSX closing tag for 'form'.
+    ╭─[ src/pages/auth/Login.jsx:92:13 ]
+    │
+ 71 │  <form onSubmit={handleSubmit(onSubmit)}>
+    │   ──┬─
+    │     ╰─── Opened here
+    │
+ 92 │           </div>
+    │             ─┬─
+    │              ╰─── Expected `</form>`
+────╯
+
+[PARSE_ERROR] Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[ src/pages/auth/Login.jsx:97:1 ]
+    │
+ 97 │ }
+    │ │
+    │ ╰─
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Login.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+7:09:51 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
+7:09:51 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+    ╭─[ src/pages/auth/Login.jsx:83:13 ]
+    │
+ 83 │             <p className="text-center text-gray-600 mt-8">
+    │             ┬
+    │             ╰──
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Login.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+7:09:52 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
+7:09:52 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+    ╭─[ src/pages/auth/Login.jsx:83:13 ]
+    │
+ 83 │             <p className="text-center text-gray-600 mt-8">
+    │             ┬
+    │             ╰──
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Login.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+7:09:53 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
+7:11:59 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x2)
+7:12:48 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x3)
+7:15:12 am [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx
+7:16:09 am [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx (x2)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm ls lucide-react
+reactauthapp@0.0.0 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp
+`-- lucide-react@1.25.0
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
+
+> reactauthapp@0.0.0 dev
+> vite
+
+
+  VITE v8.1.5  ready in 2233 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+7:24:15 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
+7:24:18 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x2)
+7:24:21 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x3)
+7:24:29 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x4)
+7:24:41 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x5)
+7:25:00 am [vite] (client) hmr update /src/index.css
+7:25:19 am [vite] (client) hmr update /src/App.css, /src/index.css
+7:56:29 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+7:56:43 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+7:56:52 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x3)
+7:57:04 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x4)
+7:57:39 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x5)
+7:57:50 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x6)
+7:57:53 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x7)
+7:57:53 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Adjacent JSX elements must be wrapped in an enclosing tag.
+     ╭─[ src/pages/auth/Register.jsx:131:5 ]
+     │
+ 131 │     </div>
+     │     ┬
+     │     ╰──
+     │
+     │ Help: Did you want a JSX fragment `<>...</>`?
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+7:57:56 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+7:58:07 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+7:58:07 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Adjacent JSX elements must be wrapped in an enclosing tag.
+     ╭─[ src/pages/auth/Register.jsx:129:7 ]
+     │
+ 129 │       </div>
+     │       ┬
+     │       ╰──
+     │
+     │ Help: Did you want a JSX fragment `<>...</>`?
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+7:58:10 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+7:58:33 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+7:58:53 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x3)
+7:58:53 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Empty parenthesized expression
+    ╭─[ src/pages/auth/Register.jsx:23:10 ]
+    │
+ 23 │ ╭─▶   return (
+    ┆ ┆
+ 25 │ ├─▶   );
+    │ │
+    │ ╰───────────
+────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+7:59:07 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+7:59:27 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+7:59:47 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x3)
+8:00:05 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x4)
+8:00:08 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x5)
+8:00:08 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Adjacent JSX elements must be wrapped in an enclosing tag.
+     ╭─[ src/pages/auth/Register.jsx:137:5 ]
+     │
+ 137 │     </div>
+     │     ┬
+     │     ╰──
+     │
+     │ Help: Did you want a JSX fragment `<>...</>`?
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+8:00:10 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+8:00:10 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Adjacent JSX elements must be wrapped in an enclosing tag.
+     ╭─[ src/pages/auth/Register.jsx:135:7 ]
+     │
+ 135 │       </div>
+     │       ┬
+     │       ╰──
+     │
+     │ Help: Did you want a JSX fragment `<>...</>`?
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+8:00:13 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+8:00:18 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+8:00:18 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Adjacent JSX elements must be wrapped in an enclosing tag.
+     ╭─[ src/pages/auth/Register.jsx:137:5 ]
+     │
+ 137 │     </div>
+     │     ┬
+     │     ╰──
+     │
+     │ Help: Did you want a JSX fragment `<>...</>`?
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+8:00:23 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+8:00:28 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+8:00:29 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Adjacent JSX elements must be wrapped in an enclosing tag.
+     ╭─[ src/pages/auth/Register.jsx:137:5 ]
+     │
+ 137 │     </div>
+     │     ┬
+     │     ╰──
+     │
+     │ Help: Did you want a JSX fragment `<>...</>`?
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+8:00:31 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+8:01:21 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
+8:01:28 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+8:03:02 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
+8:03:02 am [vite] Internal server error: Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[ src/pages/auth/Register.jsx:141:1 ]
+     │
+ 141 │ }
+     │ │
+     │ ╰─
+─────╯
+
+  Plugin: vite:oxc
+  File: E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/src/pages/auth/Register.jsx
+      at transformWithOxc (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4033:19)
+      at TransformPluginContext.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:4104:26)
+      at EnvironmentPluginContainer.transform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:30201:51)
+      at async loadAndTransform (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:20124:26)
+      at async viteTransformMiddleware (file:///E:/MURALI/REACT-JS-CRASH-COURSE/reactAuthApp/node_modules/vite/dist/node/chunks/node.js:24604:20)
+8:03:08 am [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
+^C
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>tree src /F
+Folder PATH listing for volume DATA
+Volume serial number is 0ED0-D3D0
+E:\MURALI\REACT-JS-CRASH-COURSE\REACTAUTHAPP\SRC
+│   App copy.jsx
+│   App.css
+│   App.jsx
+│   index copy.css
+│   index.css
+│   main.jsx
+│
+├───api
+│       authApi.js
+│       axios.js
+│       productApi.js
+│
+├───assets
+│       hero.png
+│       react.svg
+│       vite.svg
+│
+├───components
+│   ├───common
+│   │       Button.jsx
+│   │       Card.jsx
+│   │       Input.jsx
+│   │       PasswordInput.jsx
+│   │       Spinner.jsx
+│   │
+│   ├───forms
+│   ├───layout
+│   │       Navbar.jsx
+│   │       Sidebar.jsx
+│   │
+│   ├───products
+│   │       ProductCard.jsx
+│   │       ProductForm.jsx
+│   │
+│   └───ui
+├───context
+│       AuthContext.jsx
+│
+├───hooks
+│       useAuth.js
+│
+├───layouts
+│       AuthLayout.jsx
+│       MainLayout.jsx
+│
+├───pages
+│   ├───auth
+│   │       Login.jsx
+│   │       Register.jsx
+│   │
+│   ├───dashboard
+│   │       Dashboard.jsx
+│   │
+│   └───products
+│           AddProduct.jsx
+│           EditProduct.jsx
+│           ProductList.jsx
+│
+├───routes
+│       AppRoutes.jsx
+│       ProtectedRoute.jsx
+│
+└───utils
+
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
+
+REGISTER TEST FRONTEND:
+----------------------
+Naressh GV
+naressh@gmail.com
+GvNaressh3695*

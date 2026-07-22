@@ -51,7 +51,7 @@ const EditProduct = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-4 sm:py-6 lg:py-10">
-      <div className="max-w-5xl mx-auto px-3 sm:px-6">
+      <div className="w-full max-w-5xl mx-auto px-2 sm:px-4 lg:px-6">
         {/* Header */}
 
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6 lg:p-8 mb-6">
@@ -82,7 +82,7 @@ const EditProduct = () => {
 
         {/* Form */}
 
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 sm:p-6 lg:p-8">
+        <div className="w-full bg-white rounded-xl sm:rounded-2xl shadow-xl border border-gray-100 p-3 sm:p-6 lg:p-8">
           <ProductForm
             initialValues={product}
             onSubmit={handleSubmit}

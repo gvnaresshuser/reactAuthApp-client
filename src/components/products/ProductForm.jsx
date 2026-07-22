@@ -47,10 +47,7 @@ useEffect(() => {
   ];
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="bg-white shadow-lg rounded-xl p-8 space-y-6"
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 w-full">
       {/* Name */}
 
       <div>
@@ -159,7 +156,7 @@ useEffect(() => {
           <img
             src={initialValues.image_url}
             alt="Preview"
-            className="h-40 rounded-lg border object-cover"
+            className="w-full sm:w-72 h-48 object-cover rounded-lg border"
           />
         </div>
       )}

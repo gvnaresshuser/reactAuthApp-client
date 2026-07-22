@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
-//import axios from "axios";
 import { logoutApi } from "../api/authApi"; // adjust the path as needed
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -28,43 +27,6 @@ const Profile = () => {
   if (accessToken) {
     user = jwtDecode(accessToken);
   }
-  /* const handleLogout = async () => {
-    try {
-      await axios.post(
-        `${import.meta.env.VITE_API_URL}/logout`,
-        {},
-        {
-          withCredentials: true,
-        },
-      );
-
-      toast.success("Logged out successfully.");
-    } catch (error) {
-      console.error(error);
-
-      toast.error("Logout failed.");
-    } finally {
-      // Always remove the access token
-      localStorage.removeItem("accessToken");
-
-      navigate("/login", { replace: true });
-    }
-  }; */
-/*   const handleLogout = async () => {
-    try {
-      await logoutApi();
-
-      toast.success("Logged out successfully.");
-
-      localStorage.removeItem("accessToken");
-
-      navigate("/login", { replace: true });
-    } catch (error) {
-      console.error(error);
-
-      toast.error(error.response?.data?.message || "Logout failed.");
-    }
-  }; */
   const handleLogout = async () => {
     setLoggingOut(true);
 

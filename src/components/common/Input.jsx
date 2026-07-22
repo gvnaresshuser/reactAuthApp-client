@@ -12,7 +12,7 @@ function Input({ label, type, placeholder, register, error }) {
         className="
           w-full
           px-4
-          py-1
+          py-4
           border
           border-gray-300
           rounded-lg

@@ -70,7 +70,7 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-700 via-violet-700 to-purple-800">
-      <div className="container mx-auto min-h-screen flex items-center justify-center px-6 py-10">
+      <div className="container mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 py-8">
         {/* Left Section */}
         <div className="hidden lg:flex lg:w-1/2 px-10 xl:px-36 text-white">
           <div>
@@ -104,8 +104,8 @@ function Login() {
 
         {/* Login Card */}
 
-        <div className="w-full lg:w-1/2 flex justify-center px-10 xl:px-16">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl p-10">
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full max-w-md rounded-3xl bg-white shadow-2xl p-6 sm:p-8 lg:p-10">
             <div className="flex justify-center mb-6">
               <div className="h-16 w-16 rounded-full bg-indigo-600 flex items-center justify-center text-white text-3xl">
                 🚀

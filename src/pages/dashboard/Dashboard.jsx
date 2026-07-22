@@ -54,12 +54,14 @@ const Dashboard = () => {
     }
   };
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 w-full overflow-x-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl text-white p-8 shadow-lg">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-5">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold">Welcome Back 👋</h1>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+              Welcome Back 👋
+            </h1>
 
             <p className="mt-2 text-blue-100">
               Manage your products and account from one place.
@@ -99,11 +101,13 @@ top-0
 right-0
 h-full
 w-full
-sm:w-[420px]
+sm:w-105
+max-w-full
+overflow-x-hidden
+overflow-y-auto
 bg-white
 shadow-2xl
 z-50
-overflow-y-auto
 transform
 transition-transform
 duration-500
@@ -122,12 +126,26 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
           <div>
             <h3 className="font-semibold mb-2">Access Token</h3>
 
-            <textarea
+            {/*  <textarea
               readOnly
               value={accessToken || ""}
               rows={8}
-              className="w-full border rounded-lg p-3 text-xs bg-gray-50"
-            />
+              className="
+              w-full
+              border
+              rounded-lg
+              p-3
+              text-[11px]
+              bg-gray-50
+              break-all
+              whitespace-pre-wrap
+              resize-none
+              overflow-x-auto
+            "
+            /> */}
+            <div className="border rounded-lg p-3 bg-gray-50 overflow-x-auto">
+              <code className="text-[11px] break-all">{accessToken}</code>
+            </div>
           </div>
           {decoded && (
             <div className="space-y-3">
@@ -136,9 +154,10 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
                 <span>{decoded.id}</span>
               </div>
 
-              <div className="flex justify-between">
-                <span>Email</span>
-                <span>{decoded.email}</span>
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                <span className="font-medium">Email</span>
+
+                <span className="break-all text-right">{decoded.email}</span>
               </div>
 
               <div className="flex justify-between">
@@ -148,12 +167,16 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
 
               <div className="flex justify-between">
                 <span>Issued At</span>
-                <span>{new Date(decoded.iat * 1000).toLocaleString()}</span>
+                <span className="text-right wrap-break-word">
+                  {new Date(decoded.iat * 1000).toLocaleString()}
+                </span>
               </div>
 
               <div className="flex justify-between">
                 <span>Expires At</span>
-                <span>{new Date(decoded.exp * 1000).toLocaleString()}</span>
+                <span className="text-right wrap-break-word">
+                  {new Date(decoded.exp * 1000).toLocaleString()}
+                </span>
               </div>
               <button
                 onClick={() => {
@@ -172,7 +195,16 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
             </div>
           )}
           {copied && (
-            <div className="fixed top-5 right-5 z-[60] bg-green-600 text-white px-4 py-2 rounded-lg shadow-xl animate-pulse">
+            <div
+              className="fixed
+              top-4
+              left-1/2
+              -translate-x-1/2
+              sm:left-auto
+              sm:right-5
+              sm:translate-x-0
+              z-[60] bg-green-600 text-white px-4 py-2 rounded-lg shadow-xl animate-pulse"
+            >
               ✅ Token copied to clipboard
             </div>
           )}
@@ -181,7 +213,7 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
 
       {/* Cards */}
 
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {/* Products */}
 
         <Link
@@ -227,7 +259,7 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
       <div className="bg-white rounded-xl shadow mt-10 p-8">
         <h2 className="text-2xl font-bold mb-6">Application Features</h2>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-5">
           <div className="flex items-center gap-3">
             <ShieldCheck className="text-green-600" />
             JWT Authentication
@@ -252,20 +284,7 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
 
       {/* Quick Actions */}
 
-      <div className="flex gap-4 mt-8">
-        {/*  <Link
-          to="/products"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
-        >
-          View Products
-        </Link>
-
-        <Link
-          to="/products/add"
-          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg"
-        >
-          Add Product
-        </Link> */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
         <Link
           to="/products"
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center gap-2"

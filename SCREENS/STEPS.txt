@@ -1678,100 +1678,27 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   src/pages/dashboard/Dashboard.jsx
-
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "implemented logout"
-[main 5f309a2] implemented logout
- 1 file changed, 73 insertions(+), 8 deletions(-)
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (6/6), 1.23 KiB | 96.00 KiB/s, done.
-Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-To https://github.com/gvnaresshuser/reactAuthApp-client.git
-   c7852d2..5f309a2  main -> main
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>npm run dev
-
-> reactauthapp@0.0.0 dev
-> vite
-
-
-  VITE v8.1.5  ready in 3448 ms
-
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-  ➜  press h + enter to show help
-5:35:19 pm [vite] (client) hmr update /src/index.css, /src/pages/Profile.jsx
-5:44:00 pm [vite] (client) hmr update /src/index.css, /src/pages/Profile.jsx (x2)
-5:44:01 pm [vite] (client) hmr update /src/index.css, /src/pages/Profile.jsx (x3)
-5:45:25 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
-5:45:34 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x2)
-5:46:44 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x3)
-5:47:19 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x4)
-5:47:42 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x5)
-5:47:51 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx (x6)
-5:48:19 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
-5:48:34 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
-5:48:55 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Login.jsx
-5:50:12 pm [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx
-5:50:26 pm [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx (x2)
-5:50:35 pm [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx (x3)
-5:50:42 pm [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx (x4)
-5:50:58 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx
-5:51:08 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x2)
-5:51:15 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x3)
-5:51:18 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x4)
-5:51:27 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x5)
-5:51:36 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x6)
-5:51:38 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x7)
-5:51:47 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x8)
-5:51:49 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x9)
-5:51:51 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x10)
-5:51:59 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x11)
-5:52:01 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x12)
-5:52:21 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x13)
-5:52:57 pm [vite] (client) hmr update /src/index.css, /src/pages/auth/Register.jsx (x14)
-5:53:26 pm [vite] (client) hmr update /src/index.css, /src/components/common/Input.jsx
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add .
-
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   SCREENS/STEPS.txt
-        modified:   src/components/common/Input.jsx
+        modified:   src/api/authApi.js
+        deleted:    src/api/axios copy.js
+        modified:   src/api/axios.js
         modified:   src/pages/Profile.jsx
-        modified:   src/pages/auth/Login.jsx
-        modified:   src/pages/auth/Register.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "adjusted login,register,profile pages"
-[main c54e6a6] adjusted login,register,profile pages
- 5 files changed, 82 insertions(+), 27 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "access token and refresh token repaired"
+[main bc50ca0] access token and refresh token repaired
+ 4 files changed, 62 insertions(+), 75 deletions(-)
+ delete mode 100644 src/api/axios copy.js
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push
-Enumerating objects: 25, done.
-Counting objects: 100% (25/25), done.
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (13/13), done.
-Writing objects: 100% (13/13), 1.91 KiB | 650.00 KiB/s, done.
-Total 13 (delta 9), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (9/9), completed with 9 local objects.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.33 KiB | 454.00 KiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/reactAuthApp-client.git
-   5f309a2..c54e6a6  main -> main
+   0b6ac0c..bc50ca0  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
 =================================================================

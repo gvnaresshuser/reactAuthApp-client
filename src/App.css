@@ -200,3 +200,11 @@
   backface-visibility: hidden;
   will-change: transform;
 }
+
+/* ========================================== */
+html,
+body,
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}

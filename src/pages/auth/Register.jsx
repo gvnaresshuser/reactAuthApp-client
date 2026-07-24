@@ -67,9 +67,13 @@ function Register() {
         {/* Left Section */}
         <div className="hidden lg:flex lg:w-1/2 px-10 xl:px-36 text-white">
           <div>
-            <h1 className="text-6xl font-extrabold leading-tight">
-              Auth Admin
-            </h1>
+            <h1 className="text-6xl font-extrabold leading-tight">Register</h1>
+            <p>
+              <h4 className="text-3xl font-extrabold leading-tight">
+                <span style={{ color: "lime" }}>Access Token</span> /{" "}
+                <span style={{ color: "orange" }}>Refresh Token</span>
+              </h4>
+            </p>
 
             <p className="text-xl text-indigo-100 mt-6 leading-8">
               Build modern React applications with Express.js, PostgreSQL and

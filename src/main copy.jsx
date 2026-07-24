@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import "./index.css";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
+import { TokenProvider } from "./context/TokenContext";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Toaster position="top-right" />
       <AuthProvider>
+        <TokenProvider>
           <App />
+        </TokenProvider>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,

@@ -5,20 +5,30 @@ import { Plus, Search, RefreshCw } from "lucide-react";
 import useProducts from "../../hooks/useProducts";
 import ProductCard from "../../components/products/ProductCard";
 import { LayoutDashboard } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import { useToken } from "../../context/TokenContext";
 
 const ProductList = () => {
+const { beforeProtectedRequest } = useToken();
   const navigate = useNavigate();
   const { products, loading, search, setSearch, fetchProducts, deleteProduct } =
     useProducts();
 
-  useEffect(() => {
+/*   useEffect(() => {
     const timer = setTimeout(() => {
       fetchProducts(search);
     }, 400);
 
     return () => clearTimeout(timer);
-  }, [search]);
+  }, [search]); */
+useEffect(() => {
+  const loadProducts = async () => {
+    await beforeProtectedRequest("GET /products");
+    await fetchProducts(search);
+  };
+  const timer = setTimeout(loadProducts, 400);
+  return () => clearTimeout(timer);
+}, [search]);
 
   return (
     <div className="max-w-7xl mx-auto p-6">
@@ -73,7 +83,11 @@ const ProductList = () => {
           {/* Refresh Button */}
 
           <button
-            onClick={() => fetchProducts(search)}
+            onClick={async () => {
+             await beforeProtectedRequest("GET /products", () =>
+               fetchProducts(search),
+             );
+            }}
             className="sm:w-auto w-full min-h-[48px] px-6 bg-green-600 hover:bg-green-700 text-white rounded-lg flex items-center justify-center gap-2 transition duration-200 shadow-md hover:shadow-lg"
           >
             <RefreshCw size={18} className={loading ? "animate-spin" : ""} />

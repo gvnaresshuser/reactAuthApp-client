@@ -18,6 +18,10 @@ import { jwtDecode } from "jwt-decode";
 import { logoutApi } from "../../api/authApi"; // adjust the path as needed
 import toast from "react-hot-toast";
 const Dashboard = () => {
+  const [secondsLeft, setSecondsLeft] = useState(10);
+  const [timerRunning, setTimerRunning] = useState(false);
+const [status, setStatus] = useState("🟢 Access Token Active");
+const [statusColor, setStatusColor] = useState("bg-green-500");
   const [loggingOut, setLoggingOut] = useState(false);
   const navigate = useNavigate();
   const [showTokens, setShowTokens] = useState(false);
@@ -28,6 +32,39 @@ const Dashboard = () => {
   if (accessToken) {
     decoded = jwtDecode(accessToken);
   }
+  useEffect(() => {
+    if (secondsLeft >= 6) {
+      setStatus("🟢 Access Token Active");
+      setStatusColor("bg-green-500");
+    } else if (secondsLeft >= 3) {
+      setStatus("🟡 Access Token Expiring Soon");
+      setStatusColor("bg-yellow-500");
+    } else if (secondsLeft >= 1) {
+      setStatus("🟠 Refreshing Access Token...");
+      setStatusColor("bg-orange-500");
+    } else {
+      setStatus("🔄 New Access Token Generated");
+      setStatusColor("bg-blue-500");
+    }
+  }, [secondsLeft]);
+  useEffect(() => {
+    if (!timerRunning) return;
+
+    const interval = setInterval(() => {
+      setSecondsLeft((prev) => {
+        if (prev === 0) {
+          return 10; // Restart from 10
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timerRunning]);
+  useEffect(() => {
+    setSecondsLeft(10);
+    setTimerRunning(true);
+  }, []);
   const handleLogout = async () => {
     setLoggingOut(true);
 
@@ -62,6 +99,11 @@ const Dashboard = () => {
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
               Welcome Back 👋
             </h1>
+            <div
+              className={`${statusColor} mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full text-white font-semibold shadow-lg`}
+            >
+              {status}
+            </div>
 
             <p className="mt-2 text-blue-100">
               Manage your products and account from one place.

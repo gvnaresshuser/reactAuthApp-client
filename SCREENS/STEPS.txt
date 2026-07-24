@@ -1669,8 +1669,8 @@ To https://github.com/gvnaresshuser/reactAuthApp-client.git
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
 =================================================================
 =================================================================
-
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git add .
+warning: in the working copy of 'src/App.css', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git status
 On branch main
@@ -1678,27 +1678,25 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   src/api/authApi.js
-        deleted:    src/api/axios copy.js
-        modified:   src/api/axios.js
-        modified:   src/pages/Profile.jsx
+        modified:   SCREENS/STEPS.txt
+        modified:   src/App.css
+        modified:   src/pages/dashboard/Dashboard.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "access token and refresh token repaired"
-[main bc50ca0] access token and refresh token repaired
- 4 files changed, 62 insertions(+), 75 deletions(-)
- delete mode 100644 src/api/axios copy.js
+E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git commit -m "dashboard horizontal scrolling rectified"
+[main 01f2f33] dashboard horizontal scrolling rectified
+ 3 files changed, 70 insertions(+), 116 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>git push
-Enumerating objects: 15, done.
-Counting objects: 100% (15/15), done.
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 1.33 KiB | 454.00 KiB/s, done.
-Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Writing objects: 100% (9/9), 1.57 KiB | 804.00 KiB/s, done.
+Total 9 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
 To https://github.com/gvnaresshuser/reactAuthApp-client.git
-   0b6ac0c..bc50ca0  main -> main
+   bc50ca0..01f2f33  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\reactAuthApp>
 =================================================================

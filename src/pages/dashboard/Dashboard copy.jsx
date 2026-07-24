@@ -11,6 +11,7 @@ import {
   Boxes,
   CirclePlus,
   Settings,
+  Clock,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { KeyRound, X, Copy } from "lucide-react";
@@ -18,6 +19,10 @@ import { jwtDecode } from "jwt-decode";
 import { logoutApi } from "../../api/authApi"; // adjust the path as needed
 import toast from "react-hot-toast";
 const Dashboard = () => {
+  const [showTimer, setShowTimer] = useState(false);
+  const [secondsLeft, setSecondsLeft] = useState(10);
+const [timerRunning, setTimerRunning] = useState(false);
+
   const [loggingOut, setLoggingOut] = useState(false);
   const navigate = useNavigate();
   const [showTokens, setShowTokens] = useState(false);
@@ -28,6 +33,42 @@ const Dashboard = () => {
   if (accessToken) {
     decoded = jwtDecode(accessToken);
   }
+  useEffect(() => {
+    if (!showTimer || !decoded) return;
+
+    const updateTimer = () => {
+      const remaining = Math.max(
+        0,
+        Math.floor(decoded.exp - Date.now() / 1000),
+      );
+
+      setSecondsLeft(remaining);
+    };
+
+    updateTimer();
+
+    const interval = setInterval(updateTimer, 1000);
+
+    return () => clearInterval(interval);
+  }, [showTimer, decoded]);
+  useEffect(() => {
+    if (!timerRunning) return;
+
+    const interval = setInterval(() => {
+      setSecondsLeft((prev) => {
+        if (prev === 0) {
+          return 10; // Restart from 10
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timerRunning]);
+  useEffect(() => {
+    setSecondsLeft(10);
+    setTimerRunning(false);
+  }, []);
   const handleLogout = async () => {
     setLoggingOut(true);
 
@@ -67,6 +108,20 @@ const Dashboard = () => {
               Manage your products and account from one place.
             </p>
           </div>
+          {/* <button
+            onClick={() => setShowTokens(true)}
+            className="self-end sm:self-auto
+               w-12 h-12 sm:w-14 sm:h-14
+               rounded-2xl
+               bg-white/20
+               hover:bg-white/30
+               backdrop-blur-sm
+               flex items-center justify-center
+               transition-all
+               hover:scale-110"
+          >
+            <Clock size={24} />
+          </button>
 
           <button
             onClick={() => setShowTokens(true)}
@@ -81,7 +136,60 @@ const Dashboard = () => {
                hover:scale-110"
           >
             <KeyRound size={24} />
-          </button>
+          </button> */}
+          <div className="flex items-center gap-3 self-end sm:self-auto">
+            {showTimer && (
+              <div
+                className="
+      w-24
+      h-14
+      rounded-2xl
+      bg-white/20
+      backdrop-blur-sm
+      flex
+      items-center
+      justify-center
+      shadow-lg
+      "
+              >
+                <span className="text-3xl font-extrabold tracking-wider">
+                  {secondsLeft}
+                </span>
+              </div>
+            )}
+
+            <button
+              onClick={() => setTimerRunning((prev) => !prev)}
+              className="
+      w-12 h-12 sm:w-14 sm:h-14
+      rounded-2xl
+      bg-white/20
+      hover:bg-white/30
+      backdrop-blur-sm
+      flex items-center justify-center
+      transition-all
+      hover:scale-110
+    "
+            >
+              <Clock size={24} />
+            </button>
+
+            <button
+              onClick={() => setShowTokens(true)}
+              className="
+      w-12 h-12 sm:w-14 sm:h-14
+      rounded-2xl
+      bg-white/20
+      hover:bg-white/30
+      backdrop-blur-sm
+      flex items-center justify-center
+      transition-all
+      hover:scale-110
+    "
+            >
+              <KeyRound size={24} />
+            </button>
+          </div>
         </div>
       </div>
 

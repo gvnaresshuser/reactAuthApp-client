@@ -17,7 +17,15 @@ import { KeyRound, X, Copy } from "lucide-react";
 import { jwtDecode } from "jwt-decode";
 import { logoutApi } from "../../api/authApi"; // adjust the path as needed
 import toast from "react-hot-toast";
+import JwtStatusCard from "../../components/JwtStatusCard";
+import { useToken } from "../../context/TokenContext";
 const Dashboard = () => {
+  //------------------------
+
+  const handleProductsClick = async () => {
+    navigate("/products");
+  };
+  //------------------------
   const [loggingOut, setLoggingOut] = useState(false);
   const navigate = useNavigate();
   const [showTokens, setShowTokens] = useState(false);
@@ -28,6 +36,8 @@ const Dashboard = () => {
   if (accessToken) {
     decoded = jwtDecode(accessToken);
   }
+  //--------------------------------
+
   const handleLogout = async () => {
     setLoggingOut(true);
 
@@ -55,6 +65,7 @@ const Dashboard = () => {
   };
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 w-full overflow-x-hidden">
+      <JwtStatusCard />
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl text-white p-8 shadow-lg">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-5">
@@ -96,23 +107,23 @@ const Dashboard = () => {
       {/* Sliding Token Drawer */}
       <div
         className={`
-fixed
-top-0
-right-0
-h-full
-w-full
-sm:w-105
-max-w-full
-overflow-x-hidden
-overflow-y-auto
-bg-white
-shadow-2xl
-z-50
-transform
-transition-transform
-duration-500
-${showTokens ? "translate-x-0" : "translate-x-full"}
-`}
+        fixed
+        top-0
+        right-0
+        h-full
+        w-full
+        sm:w-105
+        max-w-full
+        overflow-x-hidden
+        overflow-y-auto
+        bg-white
+        shadow-2xl
+        z-50
+        transform
+        transition-transform
+        duration-500
+        ${showTokens ? "translate-x-0" : "translate-x-full"}
+        `}
       >
         <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 flex justify-between items-center">
           <h2 className="text-2xl font-bold">🔐 JWT Tokens</h2>
@@ -125,24 +136,6 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
         <div className="p-6 space-y-6">
           <div>
             <h3 className="font-semibold mb-2">Access Token</h3>
-
-            {/*  <textarea
-              readOnly
-              value={accessToken || ""}
-              rows={8}
-              className="
-              w-full
-              border
-              rounded-lg
-              p-3
-              text-[11px]
-              bg-gray-50
-              break-all
-              whitespace-pre-wrap
-              resize-none
-              overflow-x-auto
-            "
-            /> */}
             <div className="border rounded-lg p-3 bg-gray-50 overflow-x-auto">
               <code className="text-[11px] break-all">{accessToken}</code>
             </div>
@@ -229,7 +222,7 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
 
         {/* Add */}
 
-        <Link
+        {/*  <Link
           to="/products/add"
           className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6"
         >
@@ -238,7 +231,17 @@ ${showTokens ? "translate-x-0" : "translate-x-full"}
           <h2 className="text-2xl font-bold mt-4">Add Product</h2>
 
           <p className="text-gray-500 mt-2">Create a new product.</p>
-        </Link>
+        </Link> */}
+        <div
+          onClick={handleProductsClick}
+          className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 cursor-pointer"
+        >
+          <PlusCircle size={45} className="text-green-600" />
+
+          <h2 className="text-2xl font-bold mt-4">Products</h2>
+
+          <p className="text-gray-500 mt-2">View all products.</p>
+        </div>
 
         {/* Profile */}
 

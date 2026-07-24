@@ -1,0 +1,130 @@
+ 🔐 Access Token & Refresh Token – Notes
+
+ What is an Access Token?
+
+An Access Token is a short-lived authentication token issued by the server after a successful login. It is attached to every protected API request to verify the user's identity and authorize access to resources.
+
+ Characteristics
+
+ Short-lived (10 seconds in this example)
+ Sent with every protected API request
+ Used for authentication and authorization
+ Contains user information (claims) and an expiry time
+ Becomes invalid after its expiration time
+
+ What is a Refresh Token?
+
+A Refresh Token is a long-lived authentication token that is used to obtain a new Access Token when the current Access Token expires.
+
+ Characteristics
+
+ Long-lived (20 seconds in this example)
+ Used only to request a new Access Token
+ Not sent with every API request
+ Helps keep the user logged in without requiring repeated logins
+ Has its own expiration time
+
+ Authentication Flow
+
+ Step 1: User Login
+
+The user logs in using valid credentials (such as email and password). After successful authentication, the server generates:
+
+ An Access Token
+ A Refresh Token
+
+Both tokens are returned to the client and stored securely (typically in HttpOnly Cookies or secure storage).
+
+ Step 2: Access Protected Resources
+
+Whenever the user accesses a protected API:
+
+ The client sends the Access Token.
+ The server validates the Access Token.
+ If the token is valid, the server processes the request and returns the requested data.
+
+During this phase, the Refresh Token is not used.
+
+ Step 3: Access Token Expires
+
+Since the Access Token has a short lifespan, it eventually expires.
+
+When the client sends an expired Access Token:
+
+ The server rejects the request.
+ A 401 Unauthorized response is returned.
+
+Instead of asking the user to log in again, the client automatically sends the Refresh Token to the server.
+
+
+ Step 4: Generate a New Access Token
+
+The server validates the Refresh Token.
+
+If the Refresh Token is still valid:
+
+ The server generates a new Access Token.
+ The new Access Token is returned to the client.
+ The original API request is retried automatically.
+ The user continues using the application without interruption.
+
+This process happens in the background and is completely transparent to the user.
+
+ Step 5: Refresh Token Expires
+
+The Refresh Token also has an expiration time.
+
+When the client attempts to use an expired Refresh Token:
+
+ The server rejects the refresh request.
+ No new Access Token can be generated.
+ A 401 Unauthorized response is returned.
+
+ Step 6: User Logs In Again
+
+Once both the Access Token and Refresh Token have expired:
+
+ The user's session ends.
+ The application redirects the user to the Login page.
+ The user must authenticate again using valid credentials.
+ The server generates a new Access Token and a new Refresh Token.
+
+Why Use Two Tokens?
+
+Using both Access Tokens and Refresh Tokens provides a balance between security and user convenience.
+
+ Security
+
+ Access Tokens are short-lived, reducing the risk if they are stolen.
+ Even if an Access Token is compromised, it becomes useless after a short period.
+
+ Better User Experience
+
+ Users do not have to log in repeatedly.
+ Refresh Tokens automatically generate new Access Tokens while they remain valid.
+ Authentication is refreshed seamlessly in the background.
+
+ Testing Configuratio
+
+env
+ACCESS_TOKEN_EXPIRY=10s
+REFRESH_TOKEN_EXPIRY=20s
+
+ Timeline
+
+ 0 seconds: User logs in and receives both tokens.
+ 0–10 seconds: Access Token is valid and used for all protected API requests.
+ At 10 seconds: Access Token expires.
+ 10–20 seconds: Refresh Token is used to generate a new Access Token automatically without requiring the user to log in.
+ At 20 seconds: Refresh Token expires.
+ After 20 seconds: A new Access Token cannot be generated, and the user must log in again.
+
+ Key Points to Remember
+
+ The Access Token is used to access protected resources.
+ The Refresh Token is used only to generate a new Access Token.
+ Access Tokens are short-lived for improved security.
+ Refresh Tokens are long-lived to provide a seamless user experience.
+ If only the Access Token expires, the Refresh Token can generate a new Access Token automatically.
+ If the Refresh Token also expires, the user must log in again to obtain a new pair of tokens.
+ This two-token mechanism is widely used in modern authentication systems because it offers both strong security and a smooth user experience.
